@@ -1,0 +1,31 @@
+.itemList {
+    list-style: none;
+}
+
+.itemWraper {
+    border: 1px solid black;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+.itemBasicInfo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.itemThumbnail {
+    width: 5em;
+    height: 5em;
+}
+
+.itemName {
+    margin-top: 0;
+    margin-left: 1em;
+}
+
+.itemPrice {
+    margin-bottom: 0;
+    margin-left: auto;
+
+    align-self: flex-end;
+}
