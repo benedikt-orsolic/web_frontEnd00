@@ -53,8 +53,10 @@ function updateTotalPrice() {
 function addItemToCart(item) {
     const cart = document.getElementById('cartItemList');
     const firstChildOfCart = cart.childNodes[0];
-
-    cart.insertBefore(item.cloneNode(true), firstChildOfCart);
+    const clone = item.cloneNode(true);
+    const cloneAddToCartChild = clone.childNodes[0].childNodes[2];
+    cloneAddToCartChild.innerHTML += '<button class="removeFromCartList">Remove</button>';
+    cart.insertBefore(clone, firstChildOfCart);
     updateTotalPrice();
 }
 
