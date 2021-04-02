@@ -54,6 +54,7 @@ function addItemToCart(item) {
     const firstChildOfCart = cart.childNodes[0];
 
     cart.insertBefore(item.cloneNode(true), firstChildOfCart);
+    updateTotalPrice();
 }
 
 
