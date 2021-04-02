@@ -71,7 +71,7 @@ body {
 
 
 
-#openCartButton {
+.globalButton {
     position: fixed;
     background-color: lightgray;
     padding: 0.1em;
@@ -97,17 +97,6 @@ body {
     display: none;
 
 
-}
-
-#toggleGridView {
-    position: fixed;
-    bottom: 0.5em;
-    left: 1em;
-    background-color: lightgray;
-    padding: 0.1em;
-    box-shadow: 0.1em 0.1em 0.3em;
-    z-index: 100;
-    font-size: 3em;
 }
 
 
