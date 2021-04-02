@@ -1,5 +1,6 @@
 body {
     overflow: hidden;
+    font-size: large;
 }
 
 .itemList {
@@ -110,7 +111,7 @@ body {
     #cartItemList {
         width: auto;
         position: inherit;
-        flex: 1;
+        flex-basis: 20em;
     }
     
     #shopItemList {
