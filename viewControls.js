@@ -17,8 +17,6 @@ function itemDragging(event) {
 
     }, draggableInCart[0]);
 
-    console.log(closest)
-
 
     if( (closest.getBoundingClientRect().y + itemHeight/2) - clientY >= 0 ) {
         // if I'm above closest element
@@ -33,8 +31,6 @@ function itemDragging(event) {
 
 
 function toggleGridView() {
-
-    console.log('hello')
 
     let toggleGrid = document.getElementById('toggleGridView');
         
