@@ -46,23 +46,7 @@ document.getElementById('cartItemList').addEventListener('dragover', (event)=>{
 
 
 
-
-
-
-
-
-
-
-
-
-
 // Generate shop Items
-
-
-
-
-
-
 
 function generateItems() {
     let items = ['Apple', 'Orange', 'Pear', 'Grapes', 'Banana', 'Potatoes', 'Bread', 'Milk', 'Eggs', 'Yogurts', 'Fish', 'Steak', 'Hotdogs', 'Butter', 'Oil', 'Mayonnaise', 'Beer', 'Bear', 'Wine', 'Soda', 'Sparkling water', 'Salami', 'Marshmallow', 'Candy cotton', 'Candy sticks'];
