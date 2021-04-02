@@ -84,6 +84,16 @@ body {
 
 }
 
+#togleGridView {
+    position: fixed;
+    bottom: 0.5em;
+    left: 1em;
+    background-color: lightgray;
+    padding: 0.1em;
+    box-shadow: 0.1em 0.1em 0.3em;
+    z-index: 100;
+    font-size: 3em;
+}
 
 
 @media screen and (max-width: 800px) {
@@ -99,11 +109,6 @@ body {
     /* Firefox */
     input[type=number] {
     -moz-appearance: textfield;
-    }
-        
-    #shopItemList {
-        flex: 4;
-        
     }
     
     #cartItemList {
@@ -126,7 +131,11 @@ body {
 
     main {
         display: flex;
-        align-items: stresh;
+    }
+        
+    #shopItemList {
+        flex: 4;
+        
     }
     
     #cartItemList {
