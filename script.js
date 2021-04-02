@@ -1,8 +1,19 @@
 generateItems();
 
 document.addEventListener('click', event=>{
+    
+
     if( event.target.getAttribute('class') === 'itemAddToCartButton') {
         addItemToCart(event.target.parentNode.parentNode.parentNode);
+    };
+
+    if( event.target.getAttribute('id') === 'openCartButton') {
+        
+        if( document.getElementById('cartItemList').style.display === 'block' ){
+            document.getElementById('cartItemList').style.display = 'none';
+        } else {
+            document.getElementById('cartItemList').style.display = 'block';
+        }
     };
 });
 

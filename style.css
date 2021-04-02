@@ -5,6 +5,9 @@
     padding: 0;
 
     width: auto;
+
+    height: 100vh;
+    overflow: scroll;
 }
 
 .itemWarper {
@@ -35,32 +38,32 @@
     align-self: flex-end;
 }
 
+
+
+#openCartButton {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+
+    z-index: 100;
+
+}
+
+#cartItemList {
+    display: none;
+    position: fixed;
+
+    background-color: rgb(211, 211, 211);
+    width: auto;
+
+}
+
 #cartItemList .itemWarper .itemDescription {
     display: none;
 }
 
 #cartItemList .itemWarper .itemBasicInfo .itemAddToCart .itemAddToCartButton {
     display: none;
+
+
 }
-
-@media (max-width: 800px) { 
-
-    main {
-        display: flex;
-        flex-direction: column;
-    }
- }
-
- @media (min-width: 800px) { 
-
-    main {
-        display: flex;
-        flex-direction: row;
-    }
-
-    main .itemList {
-        flex: 1;
-        height: 100vh;
-        overflow: scroll;
-    }
- }
