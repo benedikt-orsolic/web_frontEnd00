@@ -2,7 +2,7 @@ generateItems();
 
 document.addEventListener('click', event=>{
     if( event.target.getAttribute('class') === 'itemAddToCartButton') {
-        
+        console.log( event.target.parentNode.parentNode.parentNode);
     };
 });
 
