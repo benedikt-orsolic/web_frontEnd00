@@ -41,6 +41,12 @@ document.addEventListener('click', event=>{
 });
 
 document.getElementById('cartItemList').addEventListener('dragover', (event)=>{
+    itemDragging(event);
+});
+
+
+function itemDragging(event) {
+
     event.preventDefault();
     const dragged = document.getElementById('cartItemList').querySelector('.dragging');
 
@@ -69,7 +75,7 @@ document.getElementById('cartItemList').addEventListener('dragover', (event)=>{
         // if I'm below closest element
         document.getElementById('cartItemList').insertBefore(dragged, closest.nextSibling);
     }
-});
+}
 
 function toggleGridView() {
 
