@@ -2,9 +2,19 @@ generateItems();
 
 document.addEventListener('click', event=>{
     if( event.target.getAttribute('class') === 'itemAddToCartButton') {
-        console.log( event.target.parentNode.parentNode.parentNode);
+        addItemToCart(event.target.parentNode.parentNode.parentNode);
     };
 });
+
+
+
+function addItemToCart(item) {
+    const cart = document.getElementById('cartItemList');
+    const firstChildOfCart = cart.childNodes[0];
+
+    cart.insertBefore(item.cloneNode(true), firstChildOfCart);
+}
+
 
 
 
