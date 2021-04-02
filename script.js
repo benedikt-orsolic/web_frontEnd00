@@ -84,7 +84,6 @@ function updateTotalPrice() {
     });
 
     document.getElementById('openCartButton').innerHTML = ' ' + totalPrice + ' $';
-    console.log(totalPrice)
 }
 
 
