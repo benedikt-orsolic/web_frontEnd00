@@ -54,7 +54,6 @@
     position: fixed;
 
     background-color: rgb(211, 211, 211);
-    width: auto;
 
 }
 
@@ -66,4 +65,21 @@
     display: none;
 
 
+}
+
+
+
+@media screen and (max-width: 800px) {
+    #cartItemList {
+        width: 100vw;
+        top: 0;
+        left: 0;
+    }
+
+    #openCartButton {
+        position: fixed;
+        bottom: 0.5em;
+        right: 0.5em;
+    
+    }
 }
