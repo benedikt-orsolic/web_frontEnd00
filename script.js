@@ -15,7 +15,37 @@ document.addEventListener('click', event=>{
             document.getElementById('cartItemList').style.display = 'block';
         }
     };
+
+    if( document.getElementById('cartItemList').contains(event.target) &&
+        event.target.getAttribute('class') === 'itemAmountField') {
+        // Triggered when user clicks on amount input in cart
+        updateTotalPrice();
+        //updateTotalPrice();
+    }
 });
+
+
+function updateTotalPrice() {
+
+    /* 
+        This part would call server to update list in db,
+        and potentially just return total price
+    */
+    const cartList = document.getElementById('cartItemList').childNodes;
+    let totalPrice = 0;
+    cartList.forEach( function(item) {
+        let amount = parseInt(item.childNodes[0].childNodes[2].childNodes[1].value);
+        let cost = parseInt(item.childNodes[0].childNodes[2].childNodes[2].innerHTML);
+
+        if( typeof(amount) === 'number' && typeof(cost) === 'number' &&
+            !isNaN(amount) && !isNaN(cost) ){
+            
+            totalPrice += amount * cost;
+        }
+    });
+
+    console.log(totalPrice)
+}
 
 
 
@@ -54,7 +84,7 @@ function generateItems() {
                 '<h6 class="itemName">' + el + '</h6>' +
                 '<section class="itemAddToCart">' +
                     '<label>Amount</label>' +
-                    '<input type="number" value="1">' +
+                    '<input class="itemAmountField" type="number" value="1">' +
                     '<p class="itemPrice">' + String(getRandomInt(10, 150)) + ' $</p>' +
                     '<button class="itemAddToCartButton">Add to cart</button>' +
                 '</section>' +
