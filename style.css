@@ -110,10 +110,11 @@ body {
     #cartItemList {
         width: auto;
         position: inherit;
+        flex: 1;
     }
     
     #shopItemList {
-        flex: 1;
+        flex: 4;
         
     }
     
