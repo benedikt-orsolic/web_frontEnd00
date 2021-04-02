@@ -37,6 +37,10 @@ body {
     margin-left: 1em;
 }
 
+.itemAmountField {
+    width: 3em;
+}
+
 .itemAddToCart {
     margin-bottom: 0;
     margin-left: auto;
