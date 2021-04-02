@@ -63,8 +63,40 @@ document.addEventListener('click', event=>{
         }
     };
 
-    
+
 });
+
+document.getElementById('cartItemList').addEventListener('dragover', (event)=>{
+    event.preventDefault();
+    const dragged = document.getElementById('cartItemList').querySelector('.dragging');
+
+    const draggableInCart = [...document.querySelectorAll('#cartItemList .itemWarper:not(dragging)')];
+    const itemHeight = draggableInCart[0].getBoundingClientRect().height;
+    const clientY = event.clientY;
+
+    const closest = draggableInCart.reduce((lastLowest, current)=>{
+        // These are item centers on y
+        let currentY = current.getBoundingClientRect().y + itemHeight/2;
+        let lastY = lastLowest.getBoundingClientRect().y + itemHeight/2;
+
+        if( Math.abs(currentY - clientY) < Math.abs(lastY - clientY)) return current;
+        return lastLowest;
+
+    }, draggableInCart[0]);
+
+    console.log(closest)
+
+
+    if( (closest.getBoundingClientRect().y + itemHeight/2) - clientY >= 0 ) {
+        // if I'm above closest element
+        document.getElementById('cartItemList').insertBefore(dragged, closest);
+        // .cloneNode(true) dragged.remove();
+    } else {
+        // if I'm below closest element
+        document.getElementById('cartItemList').insertBefore(dragged, closest.nextSibling);
+    }
+});
+
 
 
 function updateTotalPrice() {
@@ -99,6 +131,14 @@ function addItemToCart(item) {
 
     // Set to block so when node cloned it is not 'inline-block' when in grid view
     clone.style.display = 'block';
+    clone.setAttribute('draggable', 'true');
+    
+    clone.addEventListener('dragstart', ()=>{
+        clone.classList.add('dragging');
+    })
+    clone.addEventListener('dragend', ()=>{
+        clone.classList.remove('dragging');
+    })
 
     cloneAddToCartChild.innerHTML += '<button class="removeFromCartList">Remove</button>';
     cart.insertBefore(clone, firstChildOfCart);
