@@ -32,8 +32,12 @@ document.addEventListener('click', event=>{
     if( event.target.getAttribute('id') === 'toggleGridView') {
         let toggleGrid = document.getElementById('toggleGridView');
         if( toggleGrid.getAttribute('class') === 'fas fa-th-large') {
+            toggleGrid.classList.remove('fa-th-large');
+            toggleGrid.classList.add('fa-bars');
             
-            document.querySelector("#shopItemList .itemWarper .itemDescription").style.display = 'none';
+            document.querySelectorAll("#shopItemList .itemWarper .itemDescription").forEach(function (el){
+                el.style.display = 'none';
+            });
         }
     };
 });
