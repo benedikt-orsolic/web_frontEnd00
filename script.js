@@ -18,8 +18,8 @@ function generateItems() {
                     '<button class="itemAddToCartButton">Add to cart</button>' +
                 '</section>' +
             '</section>' +
-            '<hr>' +
             '<section class="itemDescription">' +
+                '<hr>' +
                 '<p class="itemDescription">' +
                     'Some text about item' +
                 '</p>' +
