@@ -1,5 +1,23 @@
 generateItems();
 
+document.addEventListener('click', event=>{
+    if( event.target.getAttribute('class') === 'itemAddToCartButton') {
+        
+    };
+});
+
+
+
+
+
+
+// Generate shop Items
+
+
+
+
+
+
 
 function generateItems() {
     let items = ['Apple', 'Orange', 'Pear', 'Grapes', 'Banana', 'Potatoes', 'Bread', 'Milk', 'Eggs', 'Yogurts', 'Fish', 'Steak', 'Hotdogs', 'Butter', 'Oil', 'Mayonnaise', 'Beer', 'Bear', 'Wine', 'Soda', 'Sparkling water', 'Salami', 'Marshmallow', 'Candy cotton', 'Candy sticks'];
@@ -28,7 +46,7 @@ function generateItems() {
     });
 
 
-    }
+}
     
 
 
