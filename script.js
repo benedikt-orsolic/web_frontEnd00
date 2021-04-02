@@ -38,6 +38,19 @@ document.addEventListener('click', event=>{
             document.querySelectorAll("#shopItemList .itemWarper .itemDescription").forEach(function (el){
                 el.style.display = 'none';
             });
+            document.querySelectorAll("#shopItemList .itemWarper").forEach(function (el){
+                el.style.display = 'inline-block';
+            });
+        } else {
+            toggleGrid.classList.remove('fa-bars');
+            toggleGrid.classList.add('fa-th-large');
+            
+            document.querySelectorAll("#shopItemList .itemWarper .itemDescription").forEach(function (el){
+                el.style.display = '';
+            });
+            document.querySelectorAll("#shopItemList .itemWarper").forEach(function (el){
+                el.style.display = 'block';
+            });
         }
     };
 });
