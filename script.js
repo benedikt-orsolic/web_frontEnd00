@@ -30,10 +30,15 @@ document.addEventListener('click', event=>{
     };
     
     if( event.target.getAttribute('id') === 'toggleGridView') {
+        
         let toggleGrid = document.getElementById('toggleGridView');
+        
         if( toggleGrid.getAttribute('class') === 'fas fa-th-large') {
+            // If it is grid
             toggleGrid.classList.remove('fa-th-large');
             toggleGrid.classList.add('fa-bars');
+
+            document.getElementById('shopItemList').classList.add('itemListFlex');
             
             document.querySelectorAll("#shopItemList .itemWarper .itemDescription").forEach(function (el){
                 el.style.display = 'none';
@@ -42,8 +47,11 @@ document.addEventListener('click', event=>{
                 el.style.display = 'inline-block';
             });
         } else {
+            // If it is list view set to grid
             toggleGrid.classList.remove('fa-bars');
             toggleGrid.classList.add('fa-th-large');
+
+            document.getElementById('shopItemList').classList.remove('itemListFlex');
             
             document.querySelectorAll("#shopItemList .itemWarper .itemDescription").forEach(function (el){
                 el.style.display = '';
