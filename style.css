@@ -3,6 +3,8 @@
 
     margin: 0;
     padding: 0;
+
+    width: auto;
 }
 
 .itemWarper {
@@ -36,3 +38,25 @@
 #cartItemList .itemWarper .itemDescription {
     display: none;
 }
+
+@media (max-width: 800px) { 
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+ }
+
+ @media (min-width: 800px) { 
+
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    main .itemList {
+        flex: 1;
+        height: 100vh;
+        overflow: scroll;
+    }
+ }
