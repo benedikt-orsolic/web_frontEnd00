@@ -39,6 +39,10 @@
     display: none;
 }
 
+#cartItemList .itemWarper .itemBasicInfo .itemAddToCart .itemAddToCartButton {
+    display: none;
+}
+
 @media (max-width: 800px) { 
 
     main {
