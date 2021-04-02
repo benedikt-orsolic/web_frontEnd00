@@ -22,6 +22,12 @@ document.addEventListener('click', event=>{
         updateTotalPrice();
         //updateTotalPrice();
     }
+
+    if( event.target.getAttribute('class') === 'removeFromCartList') {
+        
+        event.target.parentNode.parentNode.parentNode.remove();
+        updateTotalPrice();
+    };
 });
 
 
