@@ -64,25 +64,7 @@ document.addEventListener('click', event=>{
     };
 
     if( event.target.getAttribute('id') === 'checkOut') {
-        const cartItems = [...document.querySelectorAll('#cartItemList .itemWarper')];
-        let formData = new FormData();
-        
-        for(i=0; i < cartItems.length; i++){
-            // We use name since there are no ids set
-            
-            itemName = cartItems[i].childNodes[0].childNodes[1].innerHTML;
-            amount = cartItems[i].childNodes[0].childNodes[2].childNodes[1].value;
-
-            formData.append(itemName, amount);
-        }
-        
-        
-
-        console.log('This should go to the server');
-        for (var pair of formData.entries()) {
-            console.log(pair[0]+ ', ' + pair[1]); 
-        }
-
+        collectCartDataForCheckOut();
     };
 
 });
@@ -118,6 +100,28 @@ document.getElementById('cartItemList').addEventListener('dragover', (event)=>{
     }
 });
 
+
+
+function collectCartDataForCheckOut() {
+    const cartItems = [...document.querySelectorAll('#cartItemList .itemWarper')];
+    let formData = new FormData();
+    
+    for(i=0; i < cartItems.length; i++){
+        // We use name since there are no ids set
+        
+        itemName = cartItems[i].childNodes[0].childNodes[1].innerHTML;
+        amount = cartItems[i].childNodes[0].childNodes[2].childNodes[1].value;
+
+        formData.append(itemName, amount);
+    }
+    
+    
+
+    console.log('This should go to the server');
+    for (var pair of formData.entries()) {
+        console.log(pair[0]+ ', ' + pair[1]); 
+    }
+}
 
 
 function updateTotalPrice() {
