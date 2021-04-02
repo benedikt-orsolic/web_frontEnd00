@@ -124,8 +124,16 @@ body {
     #openCartButton {
         position: fixed;
         bottom: 0.5em;
-        right: 0.5em;
+        right: 1em;
+    }
     
+    #checkOut {
+        bottom: 0.5em;
+        right: 5em;
+    }
+    
+    #toggleGridView {
+        bottom: 0.5em;
     }
 }
 
@@ -152,7 +160,15 @@ body {
         position: fixed;
         bottom: 0.5em;
         right: 1em;
+    }
     
+    #checkOut {
+        bottom: 0.5em;
+        right: 5em;
+    }
+    
+    #toggleGridView {
+        bottom: 0.5em;
     }
 }
 
