@@ -53,6 +53,8 @@ function generateItems() {
                 '<img class="itemThumbnail" src="" alt="">' +
                 '<h6 class="itemName">' + el + '</h6>' +
                 '<section class="itemAddToCart">' +
+                    '<label>Amount</label>' +
+                    '<input type="number" value="1">' +
                     '<p class="itemPrice">' + String(getRandomInt(10, 150)) + ' $</p>' +
                     '<button class="itemAddToCartButton">Add to cart</button>' +
                 '</section>' +

@@ -41,6 +41,9 @@ body {
     margin-bottom: 0;
     margin-left: auto;
 
+    display: flex;
+    flex-direction: column;
+
     align-self: flex-end;
 }
 
