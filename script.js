@@ -94,8 +94,13 @@ function addItemToCart(item) {
     const firstChildOfCart = cart.childNodes[0];
     const clone = item.cloneNode(true);
     const cloneAddToCartChild = clone.childNodes[0].childNodes[2];
+
+    // Set to block so when node cloned it is not 'inline-block' when in grid view
+    clone.style.display = 'block';
+
     cloneAddToCartChild.innerHTML += '<button class="removeFromCartList">Remove</button>';
     cart.insertBefore(clone, firstChildOfCart);
+
     updateTotalPrice();
 }
 
