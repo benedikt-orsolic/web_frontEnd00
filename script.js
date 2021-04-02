@@ -28,6 +28,14 @@ document.addEventListener('click', event=>{
         event.target.parentNode.parentNode.parentNode.remove();
         updateTotalPrice();
     };
+    
+    if( event.target.getAttribute('id') === 'toggleGridView') {
+        let toggleGrid = document.getElementById('toggleGridView');
+        if( toggleGrid.getAttribute('class') === 'fas fa-th-large') {
+            
+            document.querySelector("#shopItemList .itemWarper .itemDescription").style.display = 'none';
+        }
+    };
 });
 
 
