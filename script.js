@@ -77,7 +77,7 @@ function toggleGridView() {
 
     let toggleGrid = document.getElementById('toggleGridView');
         
-    if( toggleGrid.getAttribute('class') === 'fas fa-th-large') {
+    if( toggleGrid.getAttribute('class') === 'globalButton fas fa-th-large') {
         // If it is grid
         toggleGrid.classList.remove('fa-th-large');
         toggleGrid.classList.add('fa-bars');
