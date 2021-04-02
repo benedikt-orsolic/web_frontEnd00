@@ -65,6 +65,10 @@ body {
     align-self: flex-end;
 }
 
+.dragging {
+    opacity: 0.4;
+}
+
 
 
 #openCartButton {
@@ -162,3 +166,4 @@ body {
     
     }
 }
+
