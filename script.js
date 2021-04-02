@@ -29,6 +29,7 @@ document.addEventListener('click', event=>{
         updateTotalPrice();
     };
     
+    // Toggle grid view
     if( event.target.getAttribute('id') === 'toggleGridView') {
         
         let toggleGrid = document.getElementById('toggleGridView');
@@ -61,6 +62,8 @@ document.addEventListener('click', event=>{
             });
         }
     };
+
+    
 });
 
 
