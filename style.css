@@ -83,3 +83,32 @@
     
     }
 }
+
+
+@media screen and (min-width: 800px) {
+    
+
+    main {
+        display: flex;
+        align-items: stresh;
+    }
+    
+    #cartItemList {
+        width: auto;
+        position: inherit;
+    }
+    
+    #shopItemList {
+        flex: 1;
+        
+    }
+    
+    
+    
+    #openCartButton {
+        position: fixed;
+        bottom: 0.5em;
+        right: 0.5em;
+    
+    }
+}
